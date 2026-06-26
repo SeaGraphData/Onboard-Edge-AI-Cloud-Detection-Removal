@@ -1,0 +1,28 @@
+# CloudGAN — conda environment: cloudgan (Iris HPC)
+# Python 3.6.13 | TensorFlow-GPU 1.15 | CUDA 10.0 (conda-forge) | cuDNN 7.6
+#
+# IMPORTANT: This environment targets TF 1.15 and Python 3.6.13 exactly.
+# The system CUDA on Iris (11.1) is incompatible with TF 1.15.
+# CUDA 10.0 and cuDNN 7.6 are installed inside the conda prefix via conda-forge,
+# so TensorFlow picks up the environment-local CUDA rather than the system one.
+#
+# Create and populate:
+#   conda create -n cloudgan python=3.6.13 -y
+#   conda activate cloudgan
+#   pip install -r requirements_cloudgan.txt
+#   conda install -c conda-forge cudatoolkit=10.0 cudnn=7.6 -y
+#
+# NeuralGym must be installed from a pinned commit (not PyPI):
+#   pip install git+https://github.com/JiahuiYu/neuralgym@88292adb524186693a32404c0cfdc790426ea441
+
+tensorflow-gpu==1.15
+numpy==1.19.5
+h5py==2.10.0
+scikit-image
+tqdm
+PyYAML
+opencv-python==4.5.5.64
+matplotlib
+scipy
+pynvml
+# neuralgym installed separately from pinned GitHub commit (see above)

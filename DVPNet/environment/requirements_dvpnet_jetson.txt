@@ -1,0 +1,42 @@
+# DVPNet — conda environment: DVPNet (Jetson Orin Nano)
+# Python 3.10 | PyTorch 2.5.0 (NVIDIA aarch64 wheel) | CUDA 12.6 | JetPack 6.1
+#
+# IMPORTANT: Standard PyPI torch does not work on Jetson aarch64.
+# Use the NVIDIA-provided wheel for JetPack 6.1 / Python 3.10:
+#
+#   pip install torch-2.5.0-cp310-cp310-linux_aarch64.whl
+#
+# The wheel is available from:
+#   https://developer.nvidia.com/embedded/jetpack-archive (JetPack 6.1 → Python packages)
+#
+# torchvision must be compiled from source (~40 min on Jetson):
+#   git clone --branch v0.20.0 https://github.com/pytorch/vision.git
+#   cd vision && python setup.py install
+#
+# cuSPARSELt 0.7.1 must also be installed (NVIDIA PyTorch wheel dependency):
+#   sudo apt-get install libcusparselt-dev
+#
+# basicsr raises TypeError on PyTorch 2.5 in basicsr/utils/registry.py.
+# Apply the single-line patch documented in the thesis appendix before installing.
+#
+# fvcore triggers a CUDA allocator failure on Jetson — use ptflops instead.
+#
+# Create environment:
+#   conda create -n DVPNet python=3.10 -y
+#   conda activate DVPNet
+#   pip install torch-2.5.0-cp310-cp310-linux_aarch64.whl
+#   pip install -r requirements_dvpnet_jetson.txt
+
+# torch installed separately from NVIDIA wheel (see above)
+# torchvision compiled from source (see above)
+basicsr
+ptflops         # FLOPs counting (replaces fvcore which fails on Jetson)
+"numpy<2"       # NumPy 2.x has ABI conflicts; downgrade to 1.x branch
+opencv-python==4.9.0.80
+scipy
+scikit-image
+tqdm
+PyYAML
+lmdb            # lazy import in basicsr utilities, not declared as dependency
+Pillow
+# pynvml is NOT available on Tegra — replaced by TegraStatsMonitor in the eval scripts

@@ -1,0 +1,61 @@
+# CD-Mamba — conda environment: cdmamba (Jetson Orin Nano)
+# Python 3.10 | PyTorch 2.5.0 (NVIDIA aarch64 wheel) | CUDA 12.6 | JetPack 6.1
+#
+# This is the most complex environment in the entire project.
+# Read the full setup sequence in CD-Mamba/README.md before proceeding.
+#
+# Prerequisites (do these BEFORE pip installs):
+#
+# 1. Add NVCC to PATH:
+#      echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
+#
+# 2. Add 8 GB swap file (WITHOUT this, mamba-ssm compilation OOMs and reboots the device):
+#      sudo fallocate -l 8G /swapfile_extra
+#      sudo chmod 600 /swapfile_extra
+#      sudo mkswap /swapfile_extra
+#      sudo swapon /swapfile_extra
+#
+# 3. Install NVIDIA aarch64 PyTorch wheel:
+#      conda create -n cdmamba python=3.10 -y
+#      conda activate cdmamba
+#      pip install torch-2.5.0-cp310-cp310-linux_aarch64.whl
+#
+# 4. Clone causal-conv1d from GitHub (PyPI tarball is missing CUDA source files):
+#      git clone https://github.com/Dao-AILab/causal-conv1d.git
+#      cd causal-conv1d && git checkout v1.1.1
+#      patch -p1 < ../patches/causal_conv1d_sm87.patch
+#      pip install -e . --no-build-isolation
+#
+# 5. Clone mamba-ssm from GitHub, apply SM 87 patch, build with MAX_JOBS=1:
+#      git clone https://github.com/state-spaces/mamba.git
+#      cd mamba && git checkout v1.1.1
+#      patch -p1 < ../patches/mamba_ssm_sm87.patch
+#      MAX_JOBS=1 pip install -e . --no-build-isolation
+#
+# 6. If pip overwrites the NVIDIA wheel during dep resolution:
+#      pip uninstall torch
+#      pip install torch-2.5.0-cp310-cp310-linux_aarch64.whl
+#
+# 7. torchvision from source (~40 min):
+#      git clone --branch v0.20.0 https://github.com/pytorch/vision.git
+#      cd vision && MAX_JOBS=1 python setup.py install
+#
+# 8. If torchvision C extension fails (Operator not found: torchvision::nms on SM 87):
+#      Use the timm stub at ~/timm_stub/ — see Jetson_Orin_Nano/scripts/
+#      export PYTHONPATH=~/timm_stub:$PYTHONPATH
+
+# torch installed separately from NVIDIA wheel (see above)
+# torchvision compiled from source OR bypassed via timm stub (see above)
+setuptools==69.5.1
+"numpy<2"
+causal-conv1d==1.1.1    # from GitHub clone + sm87 patch + --no-build-isolation
+mamba-ssm==1.1.1        # from GitHub clone + sm87 patch + MAX_JOBS=1 + --no-build-isolation
+transformers==4.40.1
+timm
+einops
+scikit-learn
+Pillow
+tqdm
+matplotlib
+ptflops             # FLOPs counting (fvcore fails on Jetson)
+# pynvml is NOT available on Tegra — replaced by TegraStatsMonitor in eval scripts

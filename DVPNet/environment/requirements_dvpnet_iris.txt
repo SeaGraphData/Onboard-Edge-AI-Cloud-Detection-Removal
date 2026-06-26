@@ -1,0 +1,26 @@
+# DVPNet — conda environment: DVPNet (Iris HPC)
+# Python 3.10 | PyTorch 1.13.1 | CUDA 11.7
+#
+# The DVPNet-env.yml provided in the original repository cannot be imported directly on Iris.
+# Two changes are required before using it:
+#   1. Comment out the Tsinghua mirror channels (not accessible outside China)
+#   2. Comment out causal-conv1d==1.1.1 (copy-paste artefact, not used by DVPNet)
+#
+# Create from scratch:
+#   conda create -n DVPNet python=3.10 -y
+#   conda activate DVPNet
+#   pip install torch==1.13.1 torchvision==0.14.1 --index-url https://download.pytorch.org/whl/cu117
+#   pip install -r requirements_dvpnet_iris.txt
+
+torch==1.13.1
+torchvision==0.14.1
+basicsr
+fvcore
+pynvml
+numpy
+scipy
+scikit-image
+tqdm
+PyYAML
+lmdb
+Pillow

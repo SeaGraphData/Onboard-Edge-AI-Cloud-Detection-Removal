@@ -1,0 +1,25 @@
+# OmniCloudMask — conda environment: GeoAI (Iris HPC)
+# Python 3.12 | PyTorch (cu118) | omnicloudmask 1.7.1
+#
+# IMPORTANT: The default conda resolver may install a CPU-only PyTorch build.
+# Install PyTorch separately via the cu118 wheel index to ensure GPU support.
+#
+# Full setup:
+#   conda create -n GeoAI python=3.12 -y
+#   conda activate GeoAI
+#   conda install -c conda-forge mamba -y
+#   mamba install -c conda-forge geoai-py -y
+#   pip install omnicloudmask==1.7.1
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118
+#   pip install pynvml
+#
+# Weights are downloaded automatically from HuggingFace Hub on first inference call.
+# No manual weight handling required.
+
+omnicloudmask==1.7.1
+geoai-py            # via conda-forge (use mamba for faster resolution)
+pynvml
+rasterio
+scikit-learn
+matplotlib
+numpy

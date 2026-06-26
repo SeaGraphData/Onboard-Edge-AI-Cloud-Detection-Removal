@@ -1,0 +1,26 @@
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,7 @@
+ # In mamba-ssm/setup.py, locate the loop that builds the -gencode flags.
+ # The original code hardcodes architectures up to SM 86/90 and does not include SM 87.
+ #
+ # Find this block (exact line numbers may vary by version):
+ #
+-for arch in ['70', '75', '80', '86', '90']:
++for arch in ['70', '75', '80', '86', '87', '90']:
+     cc_flag.append(f"-gencode=arch=compute_{arch},code=sm_{arch}")
+ 
+ # After applying this patch, mamba-ssm must still be built with:
+ #   MAX_JOBS=1 pip install -e . --no-build-isolation
+ #
+ # MAX_JOBS=1 is required to serialise compilation and prevent OOM on the Jetson's
+ # 8 GB unified memory. Even with the swap file, parallel compilation jobs exhaust RAM.
+ #
+ # Apply with:
+ #   patch -p1 < mamba_ssm_sm87.patch
+ #
+ # Verified against mamba-ssm v1.1.1 (git tag v1.1.1).
+ #
+ # Additional dependency conflict on Jetson:
+ # transformers 5.x is incompatible with mamba-ssm 1.1.1. Downgrade:
+ #   pip install transformers==4.40.1

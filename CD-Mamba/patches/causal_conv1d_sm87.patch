@@ -1,0 +1,20 @@
+--- a/setup.py
++++ b/setup.py
+@@ -1,7 +1,7 @@
+ # In causal_conv1d/setup.py, locate the loop that builds the -gencode flags.
+ # The original code hardcodes architectures up to SM 86 and does not include SM 87
+ # (NVIDIA Ampere Orin, used in the Jetson Orin Nano).
+ #
+ # Find this block (exact line numbers may vary by version):
+ #
+-for arch in ['60', '70', '75', '80', '86']:
++for arch in ['60', '70', '75', '80', '86', '87']:
+     cc_flag.append(f"-gencode=arch=compute_{arch},code=sm_{arch}")
+ 
+ # This two-character change ('87' added to the list) is the complete patch.
+ # After applying it, causal-conv1d builds and installs cleanly on the Jetson Orin Nano.
+ #
+ # Apply with:
+ #   patch -p1 < causal_conv1d_sm87.patch
+ #
+ # Verified against causal-conv1d v1.1.1 (git tag v1.1.1).

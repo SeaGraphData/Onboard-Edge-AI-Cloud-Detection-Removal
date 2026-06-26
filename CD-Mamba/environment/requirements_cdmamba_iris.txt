@@ -1,0 +1,42 @@
+# CD-Mamba — conda environment: cdmamba (Iris HPC)
+# Python 3.10 | PyTorch 2.1.0 | CUDA 11.8
+#
+# IMPORTANT NOTES:
+# 1. causal-conv1d and mamba-ssm must be installed with --no-build-isolation
+# 2. setuptools must be < 70 (version 70+ breaks mamba-ssm build system)
+# 3. NVCC must come from the 'nvidia' conda channel, NOT 'conda-forge':
+#      conda install -c nvidia cuda-nvcc=11.8 -y
+#    (cuda-toolkit=11.8 is not available on conda-forge)
+# 4. On Iris (V100, SM 70), NO patching of setup.py is required.
+#    Patching is only needed on the Jetson (SM 87).
+# 5. After confirming the environment works, clone it as a backup BEFORE
+#    replacing mamba-ssm with the authors' custom version:
+#      conda create --name cdmamba_backup --clone cdmamba
+#
+# Full setup sequence:
+#   conda create -n cdmamba python=3.10 -y
+#   conda activate cdmamba
+#   pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu118
+#   conda install -c nvidia cuda-nvcc=11.8 -y
+#   pip install setuptools==69.5.1
+#   pip install "numpy<2"
+#   pip install causal-conv1d==1.1.1 --no-build-isolation
+#   pip install mamba-ssm==1.1.1 --no-build-isolation
+#   pip install transformers==4.40.1
+#   pip install -r requirements_cdmamba_iris.txt
+
+torch==2.1.0
+torchvision==0.16.0
+setuptools==69.5.1
+"numpy<2"
+causal-conv1d==1.1.1    # install with --no-build-isolation
+mamba-ssm==1.1.1        # install with --no-build-isolation; then replace with authors' custom version
+transformers==4.40.1    # transformers 5.x is incompatible with mamba-ssm 1.1.1
+timm
+einops
+scikit-learn
+Pillow
+tqdm
+matplotlib
+pynvml
+fvcore

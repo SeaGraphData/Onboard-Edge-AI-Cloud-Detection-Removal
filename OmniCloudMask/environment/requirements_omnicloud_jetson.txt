@@ -1,0 +1,27 @@
+# OmniCloudMask — conda environment: omnicloud (Jetson Orin Nano)
+# Python 3.10 | PyTorch 2.5.0 (NVIDIA aarch64 wheel) | CUDA 12.6 | JetPack 6.1
+#
+# OmniCloudMask was the easiest Jetson deployment: standard PyPI package,
+# no custom CUDA extensions, no training pipeline.
+#
+# Most of the environment setup (NVIDIA wheel, timm stub) is shared with CD-Mamba.
+# If the cdmamba environment is already working, this is straightforward.
+#
+# Setup:
+#   conda create -n omnicloud python=3.10 -y
+#   conda activate omnicloud
+#   pip install torch-2.5.0-cp310-cp310-linux_aarch64.whl   (NVIDIA aarch64 wheel)
+#   pip install omnicloudmask==1.7.1
+#   pip install segmentation-models-pytorch timm
+#   export PYTHONPATH=~/timm_stub:$PYTHONPATH   (reuse the timm stub from CD-Mamba)
+#
+# Weights are downloaded automatically from HuggingFace Hub on first call.
+# The Jetson must have internet access for the first run.
+
+omnicloudmask==1.7.1
+segmentation-models-pytorch
+timm
+numpy
+Pillow
+# pynvml NOT available on Tegra — TegraStatsMonitor used instead
+# torch installed from NVIDIA aarch64 wheel (see above)
