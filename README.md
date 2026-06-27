@@ -1,9 +1,7 @@
 # Onboard Edge-AI for Cloud Detection and Removal in Earth Observation Satellites
 
-**Master's Thesis Companion Repository**  
-Juan Fernández Martínez — University of Luxembourg, SnT / SIGCOM  
-Supervised by Dr. Eva Lagunas and Dr. Vu Nguyen Ha  
-Defense date: July 15, 2026
+**Master's Thesis Repository**  
+
 
 ---
 
