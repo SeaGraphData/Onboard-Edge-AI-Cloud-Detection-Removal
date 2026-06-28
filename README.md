@@ -88,7 +88,7 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   ├── environment/
 │   │   ├── requirements_cdmamba_iris.txt
 │   │   └── requirements_cdmamba_jetson.txt
-│   ├── patches/                 ← Critical: sm_87 patches for causal-conv1d and mamba-ssm
+│   ├── patches/                                  ← Critical: sm_87 patches for causal-conv1d and mamba-ssm
 │   │   ├── causal_conv1d_sm87.patch
 │   │   └── mamba_ssm_sm87.patch
 │   ├── HPC_Iris/
