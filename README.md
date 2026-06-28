@@ -33,9 +33,9 @@ The full thesis document (PDF) and the weekly progress report are included at th
 
 ```
 Onboard-Edge-AI-Cloud-Detection-Removal/
-├── README.md                                ← This file
+├── README.md                                ← Main Project Description file
 ├── DATASETS.md                              ← Dataset descriptions, download links, and preparation commands
-├── Weekly_Report.pdf                        ← Weekly progress report (upload separately)
+├── Weekly_Report.pdf                        ← Weekly progress report
 │
 ├── CloudGAN/
 │   ├── README.md
@@ -43,10 +43,10 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   └── requirements_cloudgan.txt
 │   ├── HPC_Iris/
 │   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
-|   |       └── AE
-|   |       └── UNet/
-|   |       └── SN-PatchGAN/
-|   |       └── Uncertainity Filter/
+|   |   |   └── AE
+|   |   |   └── UNet/
+|   |   |   └── SN-PatchGAN/
+|   |   |   └── Uncertainity Filter/
 │   │   └── results/                          ← Raw JSON/txt & visual output files
 |   |       └── AE
 |   |       └── UNet/
@@ -54,7 +54,13 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |       └── Uncertainity Filter/
 │   └── Jetson_Orin_Nano/
 │       ├── scripts/
+|       |   └── AE
+|       |   └── UNet/
+|       |   └── SN-PatchGAN/
 │       └── results/
+|           └── AE
+|           └── UNet/
+|           └── SN-PatchGAN/
 │
 ├── DVPNet/
 │   ├── README.md
