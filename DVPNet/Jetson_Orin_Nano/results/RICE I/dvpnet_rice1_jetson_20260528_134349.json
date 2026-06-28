@@ -1,0 +1,21 @@
+{
+    "model": "DVPNet",
+    "dataset": "RICE1",
+    "platform": "Jetson Orin Nano \u2014 JetPack 6.1",
+    "weights": "/home/sigcomjetson/Desktop/DVPNet/pretrained_models/rice1/net_g_best.pth",
+    "timestamp": "2026-05-28 13:43:49",
+    "input_size": "256x256",
+    "parameters": 9978372,
+    "trainable_params": 9978372,
+    "size_mb": 38.0645,
+    "flops": 95979565056,
+    "latency_ms": 294.5489,
+    "fps": 3.4,
+    "gpu_memory_before_mb": 47.72,
+    "gpu_memory_after_mb": 47.72,
+    "gpu_memory_peak_mb": 613.34,
+    "vdd_in_w": 15.084,
+    "vdd_cpu_gpu_cv_w": 5.7149,
+    "vdd_soc_w": 4.1901,
+    "energy_per_inf_j": 1.68331848
+}

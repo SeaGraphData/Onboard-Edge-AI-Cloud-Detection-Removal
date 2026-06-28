@@ -1,0 +1,21 @@
+{
+    "model": "DVPNet",
+    "dataset": "T-Cloud",
+    "platform": "Jetson Orin Nano \u2014 JetPack 6.1",
+    "weights": "/home/sigcomjetson/Desktop/DVPNet/pretrained_models/t-cloud/net_g_best.pth",
+    "timestamp": "2026-05-28 13:45:33",
+    "input_size": "256x256",
+    "parameters": 9978372,
+    "trainable_params": 9978372,
+    "size_mb": 38.0645,
+    "flops": 95979565056,
+    "latency_ms": 295.3409,
+    "fps": 3.39,
+    "gpu_memory_before_mb": 123.91,
+    "gpu_memory_after_mb": 123.91,
+    "gpu_memory_peak_mb": 688.94,
+    "vdd_in_w": 15.1575,
+    "vdd_cpu_gpu_cv_w": 5.7355,
+    "vdd_soc_w": 4.2347,
+    "energy_per_inf_j": 1.69392967
+}
