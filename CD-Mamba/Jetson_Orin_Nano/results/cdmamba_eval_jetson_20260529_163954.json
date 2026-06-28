@@ -1,0 +1,80 @@
+{
+    "model": "CD-Mamba",
+    "platform": "Jetson Orin Nano",
+    "platform_info": {
+        "l4t_version": "R36.4.7",
+        "gpu_name": "Orin",
+        "cuda_version": "12.6",
+        "pytorch": "2.5.0a0+872d972e41.nv24.08",
+        "compute_cap": "8.7"
+    },
+    "timestamp": "2026-05-29 16:39:54",
+    "input_channels": 4,
+    "input_size": "384x384",
+    "parameters": 111027,
+    "trainable_params": 111027,
+    "size_mb": 0.4235,
+    "flops": 204556320,
+    "per_fold_results": [
+        {
+            "checkpoint": "cdm_01_0.82835.pth",
+            "fold": "01",
+            "latency_ms": 203.7624,
+            "latency_std_ms": 19.4705,
+            "fps": 4.91,
+            "mem_before_mb": 10.96,
+            "mem_after_mb": 11.52,
+            "mem_peak_mb": 57.78,
+            "avg_power_w": 8.6839,
+            "energy_per_inf_j": 1.76944299
+        },
+        {
+            "checkpoint": "cdm_04_0.86710.pth",
+            "fold": "04",
+            "latency_ms": 201.4192,
+            "latency_std_ms": 0.4508,
+            "fps": 4.96,
+            "mem_before_mb": 10.96,
+            "mem_after_mb": 11.52,
+            "mem_peak_mb": 57.78,
+            "avg_power_w": 8.7046,
+            "energy_per_inf_j": 1.75327057
+        },
+        {
+            "checkpoint": "cdm_07_0.89102.pth",
+            "fold": "07",
+            "latency_ms": 201.2823,
+            "latency_std_ms": 0.9204,
+            "fps": 4.97,
+            "mem_before_mb": 10.96,
+            "mem_after_mb": 11.52,
+            "mem_peak_mb": 57.78,
+            "avg_power_w": 8.7196,
+            "energy_per_inf_j": 1.75509543
+        },
+        {
+            "checkpoint": "cdm_10_0.89449.pth",
+            "fold": "10",
+            "latency_ms": 201.2164,
+            "latency_std_ms": 1.1008,
+            "fps": 4.97,
+            "mem_before_mb": 10.96,
+            "mem_after_mb": 11.52,
+            "mem_peak_mb": 57.78,
+            "avg_power_w": 8.7382,
+            "energy_per_inf_j": 1.75827527
+        }
+    ],
+    "averaged_results": {
+        "checkpoint": "AVERAGE (all folds)",
+        "fold": "avg",
+        "latency_ms": 201.9201,
+        "latency_std_ms": 5.4856,
+        "fps": 4.9525,
+        "mem_before_mb": 10.96,
+        "mem_after_mb": 11.52,
+        "mem_peak_mb": 57.78,
+        "avg_power_w": 8.7116,
+        "energy_per_inf_j": 1.759
+    }
+}
