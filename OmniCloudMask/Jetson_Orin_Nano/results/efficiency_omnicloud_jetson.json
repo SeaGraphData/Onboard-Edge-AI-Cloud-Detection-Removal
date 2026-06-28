@@ -1,0 +1,25 @@
+{
+  "model": "OmniCloudMask v1.7.1",
+  "platform": "Jetson Orin Nano",
+  "device": "cuda",
+  "gpu": "Orin",
+  "jetpack": "6.x (L4T R36.4.7)",
+  "cuda_version": "12.6",
+  "torch_version": "2.5.0a0+872d972e41.nv24.08",
+  "input_shape": [
+    3,
+    384,
+    384
+  ],
+  "n_runs": 100,
+  "gflops": 31.861,
+  "params_M": 14.37,
+  "avg_latency_ms": 155.402,
+  "std_latency_ms": 120.91,
+  "fps": 6.43,
+  "avg_power_w": 5.61,
+  "avg_energy_mj": 871.168,
+  "avg_ram_mb": 1738.9,
+  "inference_dtype": "float16",
+  "note": "float32 causes OOM on Jetson Orin Nano unified memory; float16 required for GPU inference"
+}
