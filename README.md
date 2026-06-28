@@ -72,7 +72,7 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |   |   └── RICE I/
 |   |   |   └── RICE II/
 |   |   |   └── T-Cloud/
-│   │   └── results/                              ← Raw JSON & visual output files
+│   │   └── results/                              ← Raw JSON output files
 |   |       └── RICE I/
 |   |       └── RICE II/
 |   |       └── T-Cloud/
