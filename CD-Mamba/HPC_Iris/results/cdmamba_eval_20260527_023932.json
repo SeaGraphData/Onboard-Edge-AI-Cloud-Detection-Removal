@@ -1,0 +1,67 @@
+{
+    "model": "CD-Mamba",
+    "timestamp": "2026-05-27 02:39:32",
+    "input_channels": 4,
+    "input_size": "384x384",
+    "parameters": 111027,
+    "trainable_params": 111027,
+    "size_mb": 0.4235,
+    "flops": 204556320,
+    "per_fold_results": [
+        {
+            "checkpoint": "cdm_01_0.82835.pth",
+            "fold": "01",
+            "latency_ms": 76.5919,
+            "fps": 13.06,
+            "gpu_memory_before_mb": 10.96,
+            "gpu_memory_after_mb": 11.52,
+            "gpu_memory_peak_mb": 57.78,
+            "avg_power_w": 79.5132,
+            "energy_per_inf_j": 6.0900634
+        },
+        {
+            "checkpoint": "cdm_04_0.86710.pth",
+            "fold": "04",
+            "latency_ms": 76.555,
+            "fps": 13.06,
+            "gpu_memory_before_mb": 10.96,
+            "gpu_memory_after_mb": 11.52,
+            "gpu_memory_peak_mb": 57.78,
+            "avg_power_w": 80.9125,
+            "energy_per_inf_j": 6.19425878
+        },
+        {
+            "checkpoint": "cdm_07_0.89102.pth",
+            "fold": "07",
+            "latency_ms": 76.0694,
+            "fps": 13.15,
+            "gpu_memory_before_mb": 10.96,
+            "gpu_memory_after_mb": 11.52,
+            "gpu_memory_peak_mb": 57.78,
+            "avg_power_w": 80.88,
+            "energy_per_inf_j": 6.15249444
+        },
+        {
+            "checkpoint": "cdm_10_0.89449.pth",
+            "fold": "10",
+            "latency_ms": 75.7927,
+            "fps": 13.19,
+            "gpu_memory_before_mb": 10.96,
+            "gpu_memory_after_mb": 11.52,
+            "gpu_memory_peak_mb": 57.78,
+            "avg_power_w": 80.9492,
+            "energy_per_inf_j": 6.13535551
+        }
+    ],
+    "averaged_results": {
+        "checkpoint": "AVERAGE (all folds)",
+        "fold": "avg",
+        "latency_ms": 76.2523,
+        "fps": 13.115,
+        "gpu_memory_before_mb": 10.96,
+        "gpu_memory_after_mb": 11.52,
+        "gpu_memory_peak_mb": 57.78,
+        "avg_power_w": 80.5637,
+        "energy_per_inf_j": 6.143
+    }
+}
