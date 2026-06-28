@@ -78,9 +78,6 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |       └── T-Cloud/
 │   └── Jetson_Orin_Nano/
 │   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
-|   |   |   └── RICE I/
-|   |   |   └── RICE II/
-|   |   |   └── T-Cloud/
 │   │   └── results/                          ← Raw JSON output files
 |   |       └── RICE I/
 |   |       └── RICE II/
