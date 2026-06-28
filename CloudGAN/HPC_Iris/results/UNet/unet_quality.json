@@ -1,0 +1,33 @@
+{
+  "model": "U-Net",
+  "task": "Cloud Detection",
+  "dataset": "38-cloud (test set)",
+  "num_images": 2352,
+  "weights": "/scratch/users/jfernandezmartinez/CloudGAN/weights/unet_checkpoint.h5",
+  "timestamp": "2026-06-05 19:42:21",
+  "threshold": 0.5,
+  "global_metrics": {
+    "accuracy": 0.775053,
+    "precision": 0.7362,
+    "recall": 0.746375,
+    "f1_score": 0.741252,
+    "iou_cloud": 0.588881,
+    "iou_non_cloud": 0.668116,
+    "mIoU": 0.628498
+  },
+  "macro_avg_metrics": {
+    "accuracy": 0.775053,
+    "precision": 0.496133,
+    "recall": 0.511357,
+    "f1_score": 0.420192,
+    "iou_cloud": 0.36619,
+    "iou_non_cloud": 0.49007,
+    "mIoU": 0.42813
+  },
+  "confusion_matrix": {
+    "TP": 49665876,
+    "TN": 69801247,
+    "FP": 17796622,
+    "FN": 16876927
+  }
+}
