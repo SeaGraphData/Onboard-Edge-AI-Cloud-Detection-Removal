@@ -1,0 +1,12 @@
+{
+  "model": "Autoencoder",
+  "parameters": 198593,
+  "size_mb": 0.7789459228515625,
+  "flops": 3504180237,
+  "latency_ms": 6.1636659900977975,
+  "fps": 162.2411080688902,
+  "gpu_memory_before_mb": 15870.0,
+  "gpu_memory_after_mb": 15870.0,
+  "avg_power_w": 66.9429,
+  "energy_per_inference_j": 0.41261367600851784
+}

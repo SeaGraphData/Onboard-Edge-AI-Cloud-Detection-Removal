@@ -1,0 +1,33 @@
+{
+  "model": "Autoencoder (AE)",
+  "task": "Cloud Detection",
+  "dataset": "38-cloud (test set)",
+  "num_images": 2352,
+  "weights": "/scratch/users/jfernandezmartinez/CloudGAN/weights/ae_checkpoint.h5",
+  "timestamp": "2026-06-05 19:42:21",
+  "threshold": 0.5,
+  "global_metrics": {
+    "accuracy": 0.742547,
+    "precision": 0.741381,
+    "recall": 0.619862,
+    "f1_score": 0.675198,
+    "iou_cloud": 0.509659,
+    "iou_non_cloud": 0.648483,
+    "mIoU": 0.579071
+  },
+  "macro_avg_metrics": {
+    "accuracy": 0.742547,
+    "precision": 0.507031,
+    "recall": 0.445312,
+    "f1_score": 0.375006,
+    "iou_cloud": 0.316693,
+    "iou_non_cloud": 0.51547,
+    "mIoU": 0.416082
+  },
+  "confusion_matrix": {
+    "TP": 41247348,
+    "TN": 73209419,
+    "FP": 14388450,
+    "FN": 25295455
+  }
+}
