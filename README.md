@@ -68,11 +68,23 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   ├── requirements_dvpnet_iris.txt
 │   │   └── requirements_dvpnet_jetson.txt
 │   ├── HPC_Iris/
-│   │   ├── scripts/
-│   │   └── results/
+│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+|   |   |   └── RICE I/
+|   |   |   └── RICE II/
+|   |   |   └── T-Cloud/
+│   │   └── results/                          ← Raw JSON & visual output files
+|   |       └── RICE I/
+|   |       └── RICE II/
+|   |       └── T-Cloud/
 │   └── Jetson_Orin_Nano/
-│       ├── scripts/
-│       └── results/
+│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+|   |   |   └── RICE I/
+|   |   |   └── RICE II/
+|   |   |   └── T-Cloud/
+│   │   └── results/                          ← Raw JSON output files
+|   |       └── RICE I/
+|   |       └── RICE II/
+|   |       └── T-Cloud/
 │
 ├── CD-Mamba/
 │   ├── README.md
