@@ -1,0 +1,12 @@
+{
+  "model": "SN-PatchGAN",
+  "parameters": 4052478,
+  "size_mb": 119.5721492767334,
+  "flops": 55570875743,
+  "latency_ms": 80.18038047739537,
+  "fps": 12.471878956497621,
+  "ram_used_mb": 5527.0,
+  "total_board_power_w": 14.675487804878044,
+  "gpu_cpu_power_w": 5.710048780487807,
+  "energy_per_inference_j": 0.4578338837639998
+}

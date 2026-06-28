@@ -1,0 +1,12 @@
+{
+  "model": "UNet",
+  "parameters": 1941381,
+  "size_mb": 7.453178405761719,
+  "flops": 6922187204,
+  "latency_ms": 194.93172032060102,
+  "fps": 5.130001409495162,
+  "ram_used_mb": 5801.0,
+  "total_board_power_w": 6.980357894736835,
+  "gpu_cpu_power_w": 1.7301157894736823,
+  "energy_per_inference_j": 0.33725444719593967
+}
