@@ -47,13 +47,13 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |   |   └── UNet/
 |   |   |   └── SN-PatchGAN/
 |   |   |   └── Uncertainity Filter/
-│   │   └── results/                            ← Raw JSON & visuals output files
+│   │   └── results/                            ← Raw JSON & Visuals output files
 |   |       └── AE
 |   |       └── UNet/
 |   |       └── SN-PatchGAN/
 |   |       └── Uncertainity Filter/
 │   └── Jetson_Orin_Nano/
-│       ├── scripts/                            ← Training + evaluation Python scripts
+│       ├── scripts/                            ← Evaluation Python scripts
 |       |   └── AE
 |       |   └── UNet/
 |       |   └── SN-PatchGAN/
@@ -68,16 +68,16 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   ├── requirements_dvpnet_iris.txt
 │   │   └── requirements_dvpnet_jetson.txt
 │   ├── HPC_Iris/
-│   │   ├── scripts/                              ← Training + evaluation Python and SLURM scripts
+│   │   ├── scripts/                              ← Evaluation Python and SLURM scripts
 |   |   |   └── RICE I/
 |   |   |   └── RICE II/
 |   |   |   └── T-Cloud/
-│   │   └── results/                              ← Raw JSON & visuals output files
+│   │   └── results/                              ← Raw JSON & Visuals output files
 |   |       └── RICE I/
 |   |       └── RICE II/
 |   |       └── T-Cloud/
 │   └── Jetson_Orin_Nano/
-│   │   ├── scripts/                              ← Training + evaluation Python scripts
+│   │   ├── scripts/                              ← Training + evaluation Python and SLURM scripts
 │   │   └── results/                              ← Raw JSON output files
 |   |       └── RICE I/
 |   |       └── RICE II/
@@ -92,11 +92,11 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   ├── causal_conv1d_sm87.patch
 │   │   └── mamba_ssm_sm87.patch
 │   ├── HPC_Iris/
-│   │   ├── scripts/
-│   │   └── results/
+│   │   ├── scripts/                              ← Evaluation Python nd SLURM scripts
+│   │   └── results/                              ← Raw JSON & Visuals output files
 │   └── Jetson_Orin_Nano/
-│       ├── scripts/
-│       └── results/
+│       ├── scripts/                              ← Evaluation Python scripts
+│       └── results/                              ← Raw JSON output files
 │
 └── OmniCloudMask/
     ├── README.md
@@ -104,11 +104,11 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
     │   ├── requirements_omnicloud_iris.txt
     │   └── requirements_omnicloud_jetson.txt
     ├── HPC_Iris/
-    │   ├── scripts/
-    │   └── results/
+    │   ├── scripts/                             ← Evaluation Python nd SLURM scripts
+    │   └── results/                             ← Raw JSON & Visuals output files
     └── Jetson_Orin_Nano/
-        ├── scripts/
-        └── results/
+        ├── scripts/                             ← Evaluation Python scripts
+        └── results/                             ← Raw JSON output files
 ```
 
 ---
