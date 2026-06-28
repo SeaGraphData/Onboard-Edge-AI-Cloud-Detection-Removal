@@ -33,31 +33,31 @@ The full thesis document (PDF) and the weekly progress report are included at th
 
 ```
 Onboard-Edge-AI-Cloud-Detection-Removal/
-├── README.md                                ← Main Project Description file
-├── DATASETS.md                              ← Dataset descriptions, download links, and preparation commands
-├── Weekly_Report.pdf                        ← Weekly progress report
+├── README.md                                   ← Main Project Description file
+├── DATASETS.md                                 ← Dataset descriptions, download links, and preparation commands
+├── Weekly_Report.pdf                           ← Weekly progress report
 │
 ├── CloudGAN/
 │   ├── README.md
 │   ├── environment/
 │   │   └── requirements_cloudgan.txt
 │   ├── HPC_Iris/
-│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+│   │   ├── scripts/                            ← Training + evaluation Python and SLURM scripts
 |   |   |   └── AE
 |   |   |   └── UNet/
 |   |   |   └── SN-PatchGAN/
 |   |   |   └── Uncertainity Filter/
-│   │   └── results/                          ← Raw JSON/txt & visual output files
+│   │   └── results/                            ← Raw JSON output files
 |   |       └── AE
 |   |       └── UNet/
 |   |       └── SN-PatchGAN/
 |   |       └── Uncertainity Filter/
 │   └── Jetson_Orin_Nano/
-│       ├── scripts/
+│       ├── scripts/                            ← Training + evaluation Python scripts
 |       |   └── AE
 |       |   └── UNet/
 |       |   └── SN-PatchGAN/
-│       └── results/
+│       └── results/                            ← Raw JSON output files
 |           └── AE
 |           └── UNet/
 |           └── SN-PatchGAN/
@@ -68,17 +68,17 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   ├── requirements_dvpnet_iris.txt
 │   │   └── requirements_dvpnet_jetson.txt
 │   ├── HPC_Iris/
-│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+│   │   ├── scripts/                              ← Training + evaluation Python and SLURM scripts
 |   |   |   └── RICE I/
 |   |   |   └── RICE II/
 |   |   |   └── T-Cloud/
-│   │   └── results/                          ← Raw JSON & visual output files
+│   │   └── results/                              ← Raw JSON & visual output files
 |   |       └── RICE I/
 |   |       └── RICE II/
 |   |       └── T-Cloud/
 │   └── Jetson_Orin_Nano/
-│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
-│   │   └── results/                          ← Raw JSON output files
+│   │   ├── scripts/                              ← Training + evaluation Python scripts
+│   │   └── results/                              ← Raw JSON output files
 |   |       └── RICE I/
 |   |       └── RICE II/
 |   |       └── T-Cloud/
