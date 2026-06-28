@@ -47,7 +47,7 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |   |   └── UNet/
 |   |   |   └── SN-PatchGAN/
 |   |   |   └── Uncertainity Filter/
-│   │   └── results/                            ← Raw JSON output files
+│   │   └── results/                            ← Raw JSON & visuals output files
 |   |       └── AE
 |   |       └── UNet/
 |   |       └── SN-PatchGAN/
@@ -72,7 +72,7 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 |   |   |   └── RICE I/
 |   |   |   └── RICE II/
 |   |   |   └── T-Cloud/
-│   │   └── results/                              ← Raw JSON output files
+│   │   └── results/                              ← Raw JSON & visuals output files
 |   |       └── RICE I/
 |   |       └── RICE II/
 |   |       └── T-Cloud/
