@@ -43,10 +43,15 @@ Onboard-Edge-AI-Cloud-Detection-Removal/
 │   │   └── requirements_cloudgan.txt
 │   ├── HPC_Iris/
 │   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+|   |       └── AE
+|   |       └── UNet/
+|   |       └── SN-PatchGAN/
+|   |       └── Uncertainity Filter/
 │   │   └── results/                          ← Raw JSON/txt & visual output files
 |   |       └── AE
 |   |       └── UNet/
 |   |       └── SN-PatchGAN/
+|   |       └── Uncertainity Filter/
 │   └── Jetson_Orin_Nano/
 │       ├── scripts/
 │       └── results/
