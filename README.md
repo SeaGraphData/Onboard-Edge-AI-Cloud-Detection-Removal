@@ -33,17 +33,20 @@ The full thesis document (PDF) and the weekly progress report are included at th
 
 ```
 Onboard-Edge-AI-Cloud-Detection-Removal/
-├── README.md                    ← This file
-├── DATASETS.md                  ← Dataset descriptions, download links, and preparation commands
-├── Weekly_Report.pdf            ← Weekly progress report (upload separately)
+├── README.md                                ← This file
+├── DATASETS.md                              ← Dataset descriptions, download links, and preparation commands
+├── Weekly_Report.pdf                        ← Weekly progress report (upload separately)
 │
 ├── CloudGAN/
 │   ├── README.md
 │   ├── environment/
 │   │   └── requirements_cloudgan.txt
 │   ├── HPC_Iris/
-│   │   ├── scripts/             ← Training + evaluation Python and SLURM scripts
-│   │   └── results/             ← Raw JSON output files
+│   │   ├── scripts/                          ← Training + evaluation Python and SLURM scripts
+│   │   └── results/                          ← Raw JSON/txt & visual output files
+|   |       └── AE
+|   |       └── UNet/
+|   |       └── SN-PatchGAN/
 │   └── Jetson_Orin_Nano/
 │       ├── scripts/
 │       └── results/
@@ -141,7 +144,6 @@ A self-contained Miniconda installation was used at `/scratch/users/jfernandezma
 | `cloudgan` | 3.6.13 | TensorFlow-GPU 1.15, CUDA 10.0 (conda-forge) | CloudGAN AE, U-Net, SN-PatchGAN |
 | `DVPNet` | 3.10 | PyTorch 1.13.1, CUDA 11.7 | DVPNet |
 | `cdmamba` | 3.10 | PyTorch 2.1.0, CUDA 11.8, custom mamba-ssm | CD-Mamba |
-| `cdmamba_backup` | 3.10 | PyTorch 2.1.0, CUDA 11.8, standard mamba-ssm | Fallback clone |
 | `GeoAI` | 3.12 | PyTorch (cu118), geoai-py | OmniCloudMask |
 
 ### Jetson Orin Nano
@@ -184,18 +186,6 @@ energy_j = power_w * (latency_ms / 1000.0)
 ---
 
 ## Key Results Summary
-
-| Model | Platform | Params | Latency (ms) | FPS | Power (W) | Energy/inf (J) |
-|---|---|---|---|---|---|---|
-| CloudGAN AE | Iris V100 | 198,593 | 6.16 | 162.0 | 66.94 | 0.413 |
-| CloudGAN AE | Jetson | 198,593 | 191.75 | 5.22 | 1.66 | 0.318 |
-| CloudGAN U-Net | Iris V100 | 1,941,381 | 8.09 | 123.63 | — | — |
-| CloudGAN U-Net | Jetson | 1,941,381 | 194.93 | 5.13 | — | — |
-| SN-PatchGAN | Iris V100 | 4,052,478 | 12.81 | 78.09 | 64.42 | 0.825 |
-| SN-PatchGAN | Jetson | 4,052,478 | 80.18 | 12.47 | — | 0.458 |
-| DVPNet | Iris V100 | ~38 MB | ~40 ms | ~25 | — | — |
-| CD-Mamba | Iris V100 | 111,027 | 76.25 | 13.12 | 80.56 | 6.143 |
-| OmniCloudMask | Iris V100 | 55.13 MB | — | — | — | — |
 
 For full results including segmentation metrics (F1, IoU) and image quality metrics (PSNR, SSIM), see the thesis PDF and `*/results/` folders.
 
