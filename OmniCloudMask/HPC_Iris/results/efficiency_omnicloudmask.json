@@ -1,0 +1,31 @@
+{
+  "model": "OmniCloudMask v1.7.1",
+  "architecture": "Ensemble: smp.Unet(regnety_004) + smp.Unet(edgenext_small)",
+  "device": "cuda",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "input_shape": [
+    3,
+    384,
+    384
+  ],
+  "n_measure_runs": 100,
+  "ensemble_models": [
+    {
+      "gflops": 14.894,
+      "params_M": 6.706
+    },
+    {
+      "gflops": 16.967,
+      "params_M": 7.664
+    }
+  ],
+  "gflops_total": 31.861,
+  "params_M_total": 14.37,
+  "avg_latency_ms": 29.948,
+  "std_latency_ms": 2.169,
+  "fps": 33.39,
+  "avg_power_w": 86.65,
+  "avg_energy_mj": 2595.04,
+  "avg_gpu_mem_mb": 66.0,
+  "peak_gpu_mem_mb": 66.0
+}
