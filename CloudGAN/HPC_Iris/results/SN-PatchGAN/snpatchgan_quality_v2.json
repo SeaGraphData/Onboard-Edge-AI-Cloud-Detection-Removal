@@ -1,0 +1,118 @@
+{
+  "model": "SN-PatchGAN (CloudGAN pipeline)",
+  "task": "Cloud Removal",
+  "timestamp": "2026-06-06 13:38:53",
+  "weights_GAN": "/scratch/users/jfernandezmartinez/CloudGAN/weights/SN_PatchGAN",
+  "config_GAN": "/scratch/users/jfernandezmartinez/CloudGAN/config/cloud_removal_config.yml",
+  "part1_rice": {
+    "dataset": "RICE examples",
+    "num_examples": 4,
+    "averages": {
+      "avg_PSNR": 20.0255,
+      "avg_SSIM": 0.4929,
+      "avg_MAE": 0.0881,
+      "avg_MSE": 0.019435,
+      "avg_RMSE": 0.11728,
+      "avg_BRMSE": 0.115903,
+      "avg_SAM": 6.2708
+    },
+    "per_image": [
+      {
+        "PSNR": 23.304,
+        "SSIM": 0.6697,
+        "MAE": 0.040578,
+        "MSE": 0.004673,
+        "RMSE": 0.068359,
+        "BRMSE": 0.066824,
+        "SAM": 3.0983,
+        "id": "1"
+      },
+      {
+        "PSNR": 21.7208,
+        "SSIM": 0.444,
+        "MAE": 0.06563,
+        "MSE": 0.006728,
+        "RMSE": 0.082027,
+        "BRMSE": 0.080804,
+        "SAM": 4.503,
+        "id": "2"
+      },
+      {
+        "PSNR": 22.9498,
+        "SSIM": 0.6561,
+        "MAE": 0.053639,
+        "MSE": 0.00507,
+        "RMSE": 0.071205,
+        "BRMSE": 0.070544,
+        "SAM": 4.0928,
+        "id": "3"
+      },
+      {
+        "PSNR": 12.1275,
+        "SSIM": 0.2019,
+        "MAE": 0.192552,
+        "MSE": 0.06127,
+        "RMSE": 0.247527,
+        "BRMSE": 0.245441,
+        "SAM": 13.3891,
+        "id": "4"
+      }
+    ]
+  },
+  "part2_38cloud_visual": {
+    "dataset": "38-cloud test set (visual only, no target)",
+    "num_images": 10,
+    "images": [
+      {
+        "index": 0,
+        "filename": "30-11-2021_15-54-54-293558.png",
+        "cloud_coverage_pct": 40.0
+      },
+      {
+        "index": 1,
+        "filename": "30-11-2021_15-54-53-670328.png",
+        "cloud_coverage_pct": 39.9
+      },
+      {
+        "index": 2,
+        "filename": "30-11-2021_15-55-06-715886.png",
+        "cloud_coverage_pct": 39.9
+      },
+      {
+        "index": 3,
+        "filename": "30-11-2021_15-55-11-520319.png",
+        "cloud_coverage_pct": 39.9
+      },
+      {
+        "index": 4,
+        "filename": "30-11-2021_15-55-44-296282.png",
+        "cloud_coverage_pct": 40.1
+      },
+      {
+        "index": 5,
+        "filename": "30-11-2021_15-55-40-798339.png",
+        "cloud_coverage_pct": 40.2
+      },
+      {
+        "index": 6,
+        "filename": "30-11-2021_15-55-04-813124.png",
+        "cloud_coverage_pct": 39.6
+      },
+      {
+        "index": 7,
+        "filename": "30-11-2021_15-55-43-425843.png",
+        "cloud_coverage_pct": 39.5
+      },
+      {
+        "index": 8,
+        "filename": "30-11-2021_15-55-44-197540.png",
+        "cloud_coverage_pct": 39.5
+      },
+      {
+        "index": 9,
+        "filename": "30-11-2021_15-54-54-645932.png",
+        "cloud_coverage_pct": 40.8
+      }
+    ]
+  }
+}
